@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -16,6 +17,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center; /* Center navigation items for mobile */
 }
 
 nav ul li {
@@ -61,10 +63,51 @@ section h2 {
 }
 
 a {
-    color: rgb(124, 24, 24)#af5e0d;
+    color: #af5e0d;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+/* Desktop View */
+@media (min-width: 768px) {
+    nav ul li {
+        display: inline-block; /* Horizontal layout */
+        margin: 0 15px;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    header {
+        padding: 15px;
+    }
+
+    nav ul {
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
